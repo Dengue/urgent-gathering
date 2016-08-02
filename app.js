@@ -10,5 +10,5 @@ var app = koa();
 app.use(route.get('/urgent', notifications.sms));
 
 app.use(serve(path.join(__dirname, 'ui')));
-app.listen(1337);
+app.listen(process.env.PORT || 1337);
 console.log('Listening on port 1337');
