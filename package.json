@@ -1,0 +1,24 @@
+{
+  "name": "urgent-gathering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dengue/urgent-gathering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dengue/urgent-gathering/issues"
+  },
+  "homepage": "https://github.com/Dengue/urgent-gathering#readme",
+  "devDependencies": {
+    "koa-route": "^2.4.2",
+    "koa-static": "^2.0.0",
+    "twilio": "^2.9.1"
+  }
+}
