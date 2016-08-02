@@ -1,15 +1,20 @@
 'use strict';
 
 var config = require('../config.json');
-var client = require('twilio')(config.accountSid, config.authToken); 
+var client = require('twilio')(config.accountSid, config.authToken);
 
-module.exports.sms = function * home(next) {
-  console.log('Urgent meeting!')
-  client.messages.create({ 
-    to: "+375297718485", 
+function *sendMessage(number) {
+  return client.messages.create({ 
+    to: "+" + number, 
     from: "+17637036384", 
     body: "Urgent meeting 1'st category!",   
-  }, function(err, message) { 
-    console.log(err, message.sid); 
-  });
+  })
+}
+
+module.exports.sms = function * home(next) {
+  try {
+    this.body = yield sendMessage(this.params.number);
+  } catch(err) {
+    this.body = err;
+  }
 }

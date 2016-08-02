@@ -1,14 +1,18 @@
 'use strict';
 
-var koa = require('koa');
+var app = require('koa')();
 var serve = require('koa-static');
-var route = require('koa-route');
+var router = require('koa-router')();
 var path = require('path');
 var notifications = require('./controllers/notifications');
-var app = koa();
 
-app.use(route.get('/urgent', notifications.sms));
+router.get('/urgent/:number', notifications.sms);
+
+app
+  .use(router.routes())
+  .use(router.allowedMethods());
 
 app.use(serve(path.join(__dirname, 'ui')));
+
 app.listen(process.env.PORT || 1337);
 console.log('Listening on port 1337');
