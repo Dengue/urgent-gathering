@@ -1,12 +1,14 @@
 'use strict';
 
-var app = require('koa')();
-var serve = require('koa-static');
-var router = require('koa-router')();
-var path = require('path');
-var notifications = require('./controllers/notifications');
+const app = require('koa')();
+const serve = require('koa-static');
+const router = require('koa-router')();
+const path = require('path');
+const notifications = require('./controllers/notifications');
+const authorization = require('./controllers/authorization');
 
 router.get('/urgent/:number', notifications.sms);
+router.get('/authorization/verify', authorization.verify);
 
 app
   .use(router.routes())

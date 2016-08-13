@@ -11,7 +11,7 @@ function * sendMessage(number) {
   });
 }
 
-module.exports.sms = function * home(next) {
+module.exports.sms = function * sms(next) {
   try {
     this.body = yield sendMessage(this.params.number);
   } catch (err) {
