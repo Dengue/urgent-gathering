@@ -1,3 +1,7 @@
+.no-design {
+  background-color: #5ecf62 !important;
+}
+
 .site {
   background-color: #787575;
 }
@@ -9,7 +13,30 @@ header {
   background: linear-gradient(#191515, #787575);
 }
 
-header .header-bar {
+header .header-bar-wrapper {
+  width: 100%;
+  height: 79px;
+  background: #787575;
+  background: -webkit-linear-gradient(legacy-direction(#191515), #787575);
+  background: linear-gradient(#191515, #787575);
+}
+
+header .header-bar-wrapper .header-bar {
+  position: relative;
+}
+
+.login-button-holder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 79px;
+  line-height: 79px;
+  margin-right: 100px;
+}
+
+.urgent-meeting-logo {
+  margin: 0 auto;
+  width: 50%;
   height: 79px;
 }
 

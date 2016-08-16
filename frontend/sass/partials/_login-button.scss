@@ -1,12 +1,11 @@
-.site {
-	background-color: #787575;
-}
-
-header {
+.login-button-holder {
+	position: absolute;
+	top: 0;
+	right: 0;
 	height: 79px;
-	@include linear-gradient(#191515, #787575);
-
-	.header-bar {
-		height: 79px;
-	}
+	line-height: 79px;
+	margin-right: 100px;
 }
+login-button {
+}
+

@@ -1,0 +1,22 @@
+.no-design {
+	background-color: #5ecf62 !important;
+}
+
+.site {
+	background-color: #787575;
+}
+
+header {
+	height: 79px;
+	@include linear-gradient(#191515, #787575);
+	.header-bar-wrapper {
+		width: 100%;
+		height: 79px;
+		@include linear-gradient(#191515, #787575);
+
+		.header-bar {
+			position: relative;
+		}
+	}
+	
+}
