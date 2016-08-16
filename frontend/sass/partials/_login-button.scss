@@ -1,3 +1,12 @@
-h1 {
-	border: 1px solid red;
+.site {
+	background-color: #787575;
+}
+
+header {
+	height: 79px;
+	@include linear-gradient(#191515, #787575);
+
+	.header-bar {
+		height: 79px;
+	}
 }

@@ -1,5 +1,16 @@
-h1 {
-  border: 1px solid red;
+.site {
+  background-color: #787575;
+}
+
+header {
+  height: 79px;
+  background: #787575;
+  background: -webkit-linear-gradient(legacy-direction(#191515), #787575);
+  background: linear-gradient(#191515, #787575);
+}
+
+header .header-bar {
+  height: 79px;
 }
 
 body {
