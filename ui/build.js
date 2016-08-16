@@ -44,27 +44,22 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./sass/common.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(1);
 	__webpack_require__(2);
 	
+	
 	angular.module('app', []);
+	__webpack_require__(4);
 	
-	angular.module('app').directive('user', function() {
-		return {
-			restrict: 'E',
-			template: '<button ng-click = "handleLoginRequest()"></button>',
-			link: link
-		}
-	
-		function link(scope) {
-			scope.handleLoginRequest = function() {
-				console.log('login requested');
-			}
-		}
-	});
+
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31844,6 +31839,35 @@
 	})(window);
 	
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var templateUrl = __webpack_require__(5);
+	
+	angular.module('app').directive('loginButton', function() {
+		return {
+			restrict: 'E',
+			templateUrl: templateUrl,
+			link: link
+		}
+	
+		function link(scope) {
+			scope.handleLoginRequest = function() {
+				console.log('login requested');
+			}
+		}
+	});
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	var path = 'd:/work/urgent-gathering/frontend/login/login-button.html';
+	var html = "<button ng-click = \"handleLoginRequest()\"></button>";
+	window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
+	module.exports = path;
 
 /***/ }
 /******/ ]);
