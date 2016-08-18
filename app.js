@@ -2,6 +2,7 @@
 
 const app = require('koa')();
 const serve = require('koa-static');
+const logger = require('koa-logger')
 const router = require('koa-router')();
 const path = require('path');
 const session = require('koa-session-store');
@@ -14,10 +15,11 @@ router.get('/authorization/verify', authorization.verify);
 app.keys = ['something secret'];
 
 app
+  .use(logger())
   .use(session({
     name: 'session',
     cookie: {
-	  httpOnly: false
+	  httpOnly: true
     }
   }))
   .use(router.routes())
