@@ -8,9 +8,11 @@ const path = require('path');
 const session = require('koa-session-store');
 const notifications = require('./controllers/notifications');
 const authorization = require('./controllers/authorization');
+const user = require('./controllers/user');
 
 router.get('/urgent/:number', notifications.sms);
 router.get('/authorization/verify', authorization.verify);
+router.get('/user', user.info);
 
 app.keys = ['something secret'];
 
