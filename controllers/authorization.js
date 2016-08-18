@@ -3,6 +3,7 @@
 const config = require('../config.json');
 const querystring = require('querystring');
 const request = require('koa-request');
+var user = require('../models/user');
 
 function buildAccessTokenRequestUrl(redirectUrl, code) {
   var origin = 'https://oauth.vk.com/access_token?';
@@ -21,6 +22,6 @@ module.exports.verify = function * verify(next) {
   var code = this.query.code;
   var accessTokenUrl = buildAccessTokenRequestUrl(redirectUrl, code);
   var res = yield request(accessTokenUrl);
-  this.session.user_id = JSON.parse(res.body).user_id;
-  this.body = 'Logged in with id ' + this.session.user_id;
+  user.id = JSON.parse(res.body).user_id;
+  this.body = res.body;
 };
