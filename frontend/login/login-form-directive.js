@@ -1,10 +1,11 @@
 var templateUrl = require('ngtemplate!html!./login-button.html');
 
+
 angular.module('app').directive('loginButton', function() {
 	return {
 		restrict: 'E',
 		scope: {},
-		template: '<a  ng-href = "{{redirectLink}}">Login</a>',
+		templateUrl: templateUrl,
 		link: link
 	}
 

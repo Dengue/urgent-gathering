@@ -34,16 +34,16 @@ module.exports = {
 		  loader: "file"
 		},
         { 
-        	test: /\.(woff|woff2)$/,
-        	loader:"url?prefix=font/&limit=5000"
+        	test: /\.(woff|woff2)/,
+        	loader:"url-loader?prefix=font/&limit=5000&minetype=application/font-woff"
         },
         { 
         	test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, 
-        	loader: "url?limit=10000&mimetype=application/octet-stream"
+        	loader: "url-loader?limit=10000&mimetype=application/octet-stream"
         },
         { 
         	test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
-        	loader: "url?limit=10000&mimetype=image/svg+xml"
+        	loader: "url-loader?limit=10000&mimetype=image/svg+xml"
         }]
 	},
 	plugins: [
