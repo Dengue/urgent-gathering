@@ -2,6 +2,6 @@
 
 var user = require('../models/user')
 
-module.exports.info = function *() {
+module.exports.info = function() {
   this.body = user;
 };

@@ -23,5 +23,5 @@ module.exports.verify = function * verify(next) {
   var accessTokenUrl = buildAccessTokenRequestUrl(redirectUrl, code);
   var res = yield request(accessTokenUrl);
   user.id = JSON.parse(res.body).user_id;
-  this.body = res.body;
+  this.redirect('/');
 };
