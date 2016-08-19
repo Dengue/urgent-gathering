@@ -1,9 +1,7 @@
 @import './mixins/_mixins.scss';
+@import './partials/_reset.scss';
+@import './partials/_typography.scss';
 @import './partials/_common.scss';
 @import './partials/login-button.scss';
 @import './partials/_logo.scss';
 
-
-body {
-	border: 2px solid green;
-}

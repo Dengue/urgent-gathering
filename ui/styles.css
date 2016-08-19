@@ -1,24 +1,171 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  /* removes cross icon on Chrome search field */
+}
+
+.cta1 {
+  font: 700 23px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.p1 {
+  font: 700 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
 .no-design {
   background-color: #5ecf62 !important;
 }
 
-.site {
-  background-color: #787575;
-}
-
 header {
-  height: 79px;
-  background: #787575;
-  background: -webkit-linear-gradient(legacy-direction(#191515), #787575);
-  background: linear-gradient(#191515, #787575);
+  height: 55px;
 }
 
 header .header-bar-wrapper {
+  border-bottom: 1px solid grey;
   width: 100%;
-  height: 79px;
-  background: #787575;
-  background: -webkit-linear-gradient(legacy-direction(#191515), #787575);
-  background: linear-gradient(#191515, #787575);
+  height: 55px;
 }
 
 header .header-bar-wrapper .header-bar {
@@ -29,22 +176,66 @@ header .header-bar-wrapper .header-bar {
   position: absolute;
   top: 0;
   right: 0;
-  height: 79px;
-  line-height: 79px;
   margin-right: 100px;
 }
 
-login-button .sign-in::after {
-  content: '\F090';
+login-button .login-link {
+  color: #666;
+}
+
+login-button .sign-in {
+  margin-right: 5px;
+}
+
+.login-buttom-top {
+  display: block;
+  height: 100%;
+  position: relative;
+  padding: 17px 10px 10px 10px;
+}
+
+.login-buttom-top:hover .login-link {
+  color: black;
+}
+
+.login-buttom-top:hover .login-popup {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.login-buttom-top .login-popup {
+  background-color: white;
+  border: 1px solid #666;
+  border-top: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 50px;
+  min-width: 300px;
+  margin-left: -150px;
+  transform: translateY(-15px);
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+.login-buttom-top .login-popup .popup-title {
+  margin: 0 10px;
+  border-bottom: 1px solid grey;
+}
+
+.login-buttom-top .login-popup .social-buttons-list {
+  text-align: center;
+}
+
+.login-buttom-top .login-popup .social-buttons-list > li {
+  display: inline-block;
 }
 
 .urgent-meeting-logo {
   margin: 0 auto;
   width: 50%;
-  height: 79px;
-}
-
-body {
-  border: 2px solid green;
+  height: 55px;
 }
 /*# sourceMappingURL=styles.css.map*/

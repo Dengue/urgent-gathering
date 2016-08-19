@@ -2,13 +2,63 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 79px;
-	line-height: 79px;
 	margin-right: 100px;
-}
-login-button {
-	.sign-in::after {
-		content: '\f090'; 
-	}
+
+	
 }
 
+
+login-button {
+	.login-link {
+		color: #666;
+	}
+	.sign-in {
+		margin-right: 5px;
+	}	
+}
+
+.login-buttom-top {
+
+	display: block;
+	height: 100%;
+	position: relative;
+	padding: 17px 10px 10px 10px;
+	&:hover {
+		.login-link {
+			color: black;
+		}
+		.login-popup {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.login-popup {
+		background-color: white;
+		border: 1px solid #666;
+		border-top: none;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		height: 50px;
+		min-width: 300px;
+		margin-left: -150px;
+		transform: translateY(-15px);
+		transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+
+		.popup-title {
+			margin: 0 10px;
+			border-bottom: 1px solid grey;
+		}
+		.social-buttons-list {
+			text-align: center;
+
+			& > li {
+				display: inline-block;
+			}
+		}
+	}
+}

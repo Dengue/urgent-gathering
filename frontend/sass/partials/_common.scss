@@ -3,17 +3,14 @@
 }
 
 .site {
-	background-color: #787575;
 }
 
 header {
-	height: 79px;
-	@include linear-gradient(#191515, #787575);
+	height: 55px;
 	.header-bar-wrapper {
+		border-bottom: 1px solid grey;
 		width: 100%;
-		height: 79px;
-		@include linear-gradient(#191515, #787575);
-
+		height: 55px;
 		.header-bar {
 			position: relative;
 		}
