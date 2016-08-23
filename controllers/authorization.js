@@ -4,6 +4,8 @@ const config = require('../config.json');
 const querystring = require('querystring');
 const request = require('koa-request');
 var user = require('../models/user');
+var redis = require("redis");
+// var client = redis.createClient(6379);
 
 function buildAccessTokenRequestUrl(redirectUrl, code) {
   var origin = 'https://oauth.vk.com/access_token?';

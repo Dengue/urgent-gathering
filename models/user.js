@@ -1,9 +1,9 @@
 'use strict';
 
 var user = {
-  id: '',
-  firstName: '',
-  lastName: ''
+  id: null,
+  firstName: null,
+  lastName: null
 }
 
 module.exports = user;

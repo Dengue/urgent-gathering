@@ -7,7 +7,7 @@ function * sendMessage(number) {
   return client.messages.create({
     to: "+" + number,
     from: "+17637036384",
-    body: "Urgent meeting 1'st category!"
+    body: "Срочный сбор первой категории!"
   });
 }
 
