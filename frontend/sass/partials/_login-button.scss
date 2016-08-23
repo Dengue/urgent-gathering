@@ -24,6 +24,8 @@ login-button {
 	position: relative;
 	padding: 17px 10px 10px 10px;
 	&:hover {
+
+		cursor: arrow;
 		.login-link {
 			color: black;
 		}

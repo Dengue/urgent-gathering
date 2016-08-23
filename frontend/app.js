@@ -4,5 +4,13 @@ require("./sass/common.scss");
 require('angular');
 
 
-angular.module('app', []);
+let app = angular.module('app', [require('angular-ui-router')]);
+app.config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise("/index");
+	$stateProvider
+    	.state('index', {
+     		 url: "",
+      		 template: require('./index.html')
+    	});
+});
 require('./login/login-form-directive.js');
