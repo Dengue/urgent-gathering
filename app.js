@@ -13,6 +13,7 @@ const app = require('koa')(),
 router.get('/urgent/:number', notifications.sms);
 router.get('/authorization/verify', authorization.verify);
 router.get('/user', user.info);
+router.get('/participants', user.participants);
 
 app.keys = ['something secret'];
 
