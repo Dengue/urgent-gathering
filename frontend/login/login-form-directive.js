@@ -1,11 +1,10 @@
-var templateUrl = require('ngtemplate!html!./login-button.html');
-
+var template = require('./login-button.html');
 
 angular.module('app').directive('loginButton', function() {
 	return {
 		restrict: 'E',
 		scope: {},
-		templateUrl: templateUrl,
+		template: template,
 		link: link
 	}
 

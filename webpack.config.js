@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -44,9 +45,14 @@ module.exports = {
         { 
         	test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
         	loader: "url-loader?limit=10000&mimetype=image/svg+xml"
-        }]
+        },
+        {
+     		test: /\.html$/,
+      		loader: 'html'
+    	}]
 	},
 	plugins: [
-		new ExtractTextPlugin('styles.css',{allChunks:true})
+		new HtmlWebpackPlugin({template: './index.html'}),
+	 	new ExtractTextPlugin('styles.css',{allChunks:true})
 	]
 }
