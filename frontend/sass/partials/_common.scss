@@ -17,3 +17,9 @@ header {
 	}
 	
 }
+
+@media (min-width: $screen-lg-min) {
+	.site .container {
+		width: 1500px;
+	}
+}

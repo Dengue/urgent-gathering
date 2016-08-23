@@ -10,7 +10,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
     	.state('index', {
      		 url: "",
-      		 template: require('./index.html')
+      		 templateUrl: require('ngtemplate!html!./index.html')
     	});
 });
 require('./login/login-form-directive.js');
+require('./add-participants/add-participants.js');
