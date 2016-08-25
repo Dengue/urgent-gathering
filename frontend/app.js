@@ -5,6 +5,11 @@ require('angular');
 
 
 let app = angular.module('app', [require('angular-ui-router')]);
+
+require('./login/login-service.js');
+require('./login/login-form-directive.js');
+require('./add-participants/add-participants.js');
+
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise("/index");
 	$stateProvider
@@ -12,6 +17,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
      		 url: "",
       		 templateUrl: require('ngtemplate!html!./index.html')
     	});
-});
-require('./login/login-form-directive.js');
-require('./add-participants/add-participants.js');
+}).
+run(['loginService',function(loginService) {
+	
+}]);

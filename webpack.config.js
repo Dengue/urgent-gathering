@@ -18,8 +18,12 @@ module.exports = {
 	},
 	watch: NODE_ENV === 'development',
 	watchOptions: {
-		aggregateTimeout: 500
+		aggregateTimeout: 200
 	},
+	devServer: {
+    	host:'localhost',
+    	port: 8080
+  	},
 	devtool: "source-map",
 	module: {
 		loaders: [{
@@ -53,6 +57,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({template: './index.html'}),
-	 	new ExtractTextPlugin('styles.css',{allChunks:true})
+	 	new ExtractTextPlugin('styles.css',{allChunks:true}),
+	 	new webpack.HotModuleReplacementPlugin()
 	]
 }
