@@ -19,11 +19,12 @@ function buildAccessTokenRequestUrl(redirectUrl, code) {
   return origin + query;
 }
 
-module.exports.verify = function * verify(next) {
+module.exports.verify = function* verify(next) {
   var redirectUrl = this.request.origin + this.request.path;
   var code = this.query.code;
   var accessTokenUrl = buildAccessTokenRequestUrl(redirectUrl, code);
   var res = yield request(accessTokenUrl);
   user.id = JSON.parse(res.body).user_id;
+  user.access_token = JSON.parse(res.body).access_token;
   this.redirect('/');
 };

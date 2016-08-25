@@ -3,7 +3,7 @@
 var config = require('../config.json');
 var client = require('twilio')(config.accountSid, config.authToken);
 
-function * sendMessage(number) {
+function* sendMessage(number) {
   return client.messages.create({
     to: "+" + number,
     from: "+17637036384",
@@ -11,7 +11,7 @@ function * sendMessage(number) {
   });
 }
 
-module.exports.sms = function * sms(next) {
+module.exports.sms = function* sms(next) {
   try {
     this.body = yield sendMessage(this.params.number);
   } catch (err) {

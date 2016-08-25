@@ -14,6 +14,7 @@ router.get('/urgent/:number', notifications.sms);
 router.get('/authorization/verify', authorization.verify);
 router.get('/user', user.info);
 router.get('/participants', user.participants);
+router.get('/search/:name', user.search);
 
 app.keys = ['something secret'];
 
@@ -22,7 +23,7 @@ app
   .use(session({
     name: 'session',
     cookie: {
-	  httpOnly: true
+	    httpOnly: true
     }
   }))
   .use(router.routes())
